@@ -1,5 +1,4 @@
 import os
-import pyfiglet
 
 global language
 language = "english"
@@ -180,7 +179,16 @@ def menu_juego():
 
     global language
     limpiar_pantalla()
-    logo_juego = pyfiglet.figlet_format("SnailRace", font="banner")
+
+    logo_juego = """
+  #####                         ######                       
+ #     # #    #   ##   # #      #     #   ##    ####  ###### 
+ #       ##   #  #  #  # #      #     #  #  #  #    # #      
+  #####  # #  # #    # # #      ######  #    # #      #####  
+       # #  # # ###### # #      #   #   ###### #      #      
+ #     # #   ## #    # # #      #    #  #    # #    # #      
+  #####  #    # #    # # ###### #     # #    #  ####  ###### 
+"""
     print(logo_juego)
     print("\n")
 
