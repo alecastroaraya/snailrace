@@ -52,6 +52,9 @@ def tablero_juego():
             respuesta = input("Presione ENTER para continuar la carrera.\n")
         case "french":
             respuesta = input("Appuyez sur ENTER pour continuer la course.\n")
+
+    num_tablero += num_tablero
+    limpiar_pantalla()
     
     def carrera_caracoles(caracol_escogido,numero_casillas_escogido):
         """ Esta funcion avanza la carrera de caracoles hasta que uno de los dos haya llegado a la meta.
@@ -70,6 +73,7 @@ def tablero_juego():
             return
         
         else:
+            limpiar_pantalla()
             carrera_caracoles_aux(random.choice(caracoles),random.randint(0,3))
         
     def carrera_caracoles_aux(caracol_escogido,numero_casillas_escogido):
@@ -122,6 +126,7 @@ def tablero_juego():
                 case "french":
                     respuesta = input("Appuyez sur ENTER pour continuer la course.\n")
 
+            limpiar_pantalla()
             nuevo_tablero = carrera_caracoles(random.choice(caracoles),random.randint(0,3))
 
         elif caracol_escogido == caracol_2:
@@ -148,6 +153,7 @@ def tablero_juego():
                 case "french":
                     respuesta = input("Appuyez sur ENTER pour continuer la course.\n")
 
+            limpiar_pantalla()
             nuevo_tablero = carrera_caracoles(random.choice(caracoles),random.randint(0,3))
 
         else:
@@ -226,7 +232,9 @@ L'escargot qui finit en premier gagnera la course.\n""")
     
     elif respuesta == "2":
         print("\n")
+        limpiar_pantalla()
         tablero_juego()
+        limpiar_pantalla()
     
     elif respuesta == "3":
         limpiar_pantalla()
